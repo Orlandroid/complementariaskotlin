@@ -7,7 +7,28 @@
 
     <fragment
         android:id="@+id/login"
-        android:name="com.example.complementariasmx.Login"
+        android:name="com.example.complementariasmx.view.Login"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_menuPrincipal"
+            app:destination="@id/menuPrincipal" />
+        <action
+            android:id="@+id/action_login_to_singUp"
+            app:destination="@id/singUp" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuPrincipal"
+        android:name="com.example.complementariasmx.view.MenuMain"
+        android:label="fragment_menu_principal"
+        tools:layout="@layout/fragment_menu_principal" />
+    <fragment
+        android:id="@+id/singUp"
+        android:name="com.example.complementariasmx.view.SingUp"
+        android:label="fragment_sing_up"
+        tools:layout="@layout/fragment_sing_up" >
+        <action
+            android:id="@+id/action_singUp_to_login"
+            app:destination="@id/login" />
+    </fragment>
 </navigation>
