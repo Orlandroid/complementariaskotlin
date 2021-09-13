@@ -1,4 +1,4 @@
-package com.example.complementariasmx.view
+package com.example.complementariasmx.ui.login
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

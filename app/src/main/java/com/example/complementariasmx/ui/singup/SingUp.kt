@@ -1,4 +1,4 @@
-package com.example.complementariasmx.view
+package com.example.complementariasmx.ui.singup
 
 import android.os.Bundle
 import android.util.Log

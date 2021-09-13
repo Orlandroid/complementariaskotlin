@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/login"
-        android:name="com.example.complementariasmx.view.Login"
+        android:name="com.example.complementariasmx.ui.login.Login"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/menuPrincipal"
-        android:name="com.example.complementariasmx.view.MenuMain"
+        android:name="com.example.complementariasmx.ui.menumain.MenuMain"
         android:label="fragment_menu_principal"
         tools:layout="@layout/fragment_menu_principal" />
     <fragment
         android:id="@+id/singUp"
-        android:name="com.example.complementariasmx.view.SingUp"
+        android:name="com.example.complementariasmx.ui.singup.SingUp"
         android:label="fragment_sing_up"
         tools:layout="@layout/fragment_sing_up" >
         <action

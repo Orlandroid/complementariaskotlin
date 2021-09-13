@@ -1,4 +1,4 @@
-package com.example.complementariasmx.view
+package com.example.complementariasmx.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
