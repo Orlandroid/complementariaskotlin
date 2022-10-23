@@ -6,12 +6,13 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:name=".MyApplication"
+        android:name=".presentacion.ui.MyApplication"
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/Theme.ComplementariasMx">
         <activity
-            android:name=".ui.MainActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:name="com.example.complementariasmx.presentacion.ui.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

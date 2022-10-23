@@ -1,4 +1,4 @@
-package com.example.complementariasmx.firebase
+package com.example.complementariasmx.data.firebase
 
 import com.google.firebase.auth.FirebaseAuth
 import javax.inject.Inject

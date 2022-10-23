@@ -1,4 +1,4 @@
-package com.example.complementariasmx.ui.singup
+package com.example.complementariasmx.presentacion.ui.singup
 
 import android.os.Bundle
 import android.util.Log
@@ -6,10 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.navigation.fragment.findNavController
-import com.example.complementariasmx.R
 import com.example.complementariasmx.databinding.FragmentSingUpBinding
+import com.example.complementariasmx.presentacion.ui.util.sendToast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -25,31 +24,35 @@ class SingUp : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        _binding = FragmentSingUpBinding.inflate(layoutInflater)
+    ): View {
+        _binding = FragmentSingUpBinding.inflate(layoutInflater,container,false)
+        setUpUi()
+        return binding.root
+    }
+
+    private fun setUpUi() {
+        with(binding) {
+
+        }
+        createUserWithEmailAndPassword()
+    }
+
+
+    private fun createUserWithEmailAndPassword() {
         binding.buttonSingUp.setOnClickListener {
             if (areEqualPassword()) {
                 auth.createUserWithEmailAndPassword(getUser(), getPassword())
                     .addOnCompleteListener {
                         if (it.isSuccessful) {
-                            Toast.makeText(
-                                requireContext(),
-                                "Usuario Creado correctamente",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                            findNavController().navigate(R.id.action_singUp_to_login)
+                            sendToast(requireContext(), "Usurio creado correctamente")
+                            findNavController().popBackStack()
                         } else
                             Log.d(TAG, it.exception.toString())
                     }
 
             } else
-                Toast.makeText(
-                    requireContext(),
-                    "Las 2 contraseñas deben de ser iguales",
-                    Toast.LENGTH_SHORT
-                ).show()
+                sendToast(requireContext(), "Las 2 contraseñas debe de ser iguales")
         }
-        return binding.root
     }
 
     private fun getUser(): String = binding.txtUser.editText?.text.toString()

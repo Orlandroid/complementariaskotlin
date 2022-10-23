@@ -1,4 +1,4 @@
-package com.example.complementariasmx.ui
+package com.example.complementariasmx.presentacion.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,6 +1,6 @@
 package com.example.complementariasmx.di
 
-import com.example.complementariasmx.firebase.FireBaseSource
+import com.example.complementariasmx.data.firebase.FireBaseSource
 import com.google.firebase.auth.FirebaseAuth
 import dagger.Module
 import dagger.Provides

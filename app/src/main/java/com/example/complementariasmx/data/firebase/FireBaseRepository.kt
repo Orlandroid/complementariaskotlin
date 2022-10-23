@@ -1,6 +1,5 @@
-package com.example.complementariasmx.repository
+package com.example.complementariasmx.data.firebase
 
-import com.example.complementariasmx.firebase.FireBaseSource
 import javax.inject.Inject
 
 class FireBaseRepository @Inject constructor(private val fireBaseSource: FireBaseSource) {
@@ -9,6 +8,4 @@ class FireBaseRepository @Inject constructor(private val fireBaseSource: FireBas
 
     fun signIn(email: String, password: String) = fireBaseSource.singIn(email, password)
 
-
-    
 }
